@@ -13,7 +13,7 @@ class TreeNodeController extends Controller
     use ApiControllerTrait;
 
     protected $allowedQueryParamKeys = [
-        'include','filter'
+        'include', 'filter',
     ];
 
     public function index(Request $request): JsonResponse

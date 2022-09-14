@@ -13,7 +13,7 @@ class NodeTreeController extends Controller
     use ApiControllerTrait;
 
     protected $allowedQueryParamKeys = [
-        'selectOptions'
+        'selectOptions',
     ];
 
     public function index(Request $request, int $id): JsonResponse
