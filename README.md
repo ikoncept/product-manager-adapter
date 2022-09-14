@@ -1,4 +1,4 @@
-# Usage in conjunction with the product register api
+# Product manager adapter
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ikoncept/product-manager-adapter.svg)](https://packagist.org/packages/ikoncept/product-manager-adapter)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ikoncept/product-manager-adapter/run-tests?label=tests)](https://github.com/ikoncept/product-manager-adapter/actions?query=workflow%3Arun-tests+branch%3Amain)

@@ -17,9 +17,6 @@ class ProductManagerAdapterServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('product-manager-adapter')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_product-manager-adapter_table')
-            ->hasCommand(ProductManagerAdapterCommand::class);
+            ->hasConfigFile();
     }
 }
