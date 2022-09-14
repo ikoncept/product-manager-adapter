@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Ikoncept\ProductManagerAdapter\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ProductManagerAdapterCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'product-manager-adapter';
 
     public $description = 'My command';
 
