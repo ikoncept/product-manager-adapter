@@ -2,7 +2,6 @@
 
 namespace Ikoncept\ProductManagerAdapter;
 
-use Ikoncept\ProductManagerAdapter\Commands\ProductManagerAdapterCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
