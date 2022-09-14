@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ikoncept\\ProductManagerAdapter\\": "src",
-            "Ikoncept\\ProductManagerAdapter\\Database\\Factories\\": "database/factories"
+            "Ikoncept\\ProductManagerAdapter\\": "src"
         }
     },
     "autoload-dev": {
