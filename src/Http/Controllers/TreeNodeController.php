@@ -2,9 +2,9 @@
 
 namespace Ikoncept\ProductManagerAdapter\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Http;
 use Infab\Core\Traits\ApiControllerTrait;
 

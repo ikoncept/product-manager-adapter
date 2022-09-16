@@ -3,6 +3,7 @@
 namespace Ikoncept\ProductManagerAdapter\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Http;
 use Infab\Core\Traits\ApiControllerTrait;
@@ -11,7 +12,7 @@ class ProductTreeController extends Controller
 {
     use ApiControllerTrait;
 
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         // $eagerLoad = $this->getEagerLoad([]);
         // $productTree = QueryBuilder::for(ProductTree::class)
