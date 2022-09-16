@@ -23,7 +23,7 @@ class NodeTreeController extends Controller
         $response = Http::accept('application/json')
             ->withHeaders([
                 'Authorization' => 'Bearer '.$key,
-                'X-LOCALE' => 'en',
+                'X-LOCALE' => $request->header('X-LOCALE', 'en'),
             ])
             ->get(config('product-manager-adapter.endpoint').'/api/admin/node-trees/'.$id, $queryParams);
 
