@@ -20,10 +20,12 @@ class TreeNodeSlugsController extends Controller
     {
         $queryParams = $request->only($this->allowedQueryParamKeys);
         $key = config('product-manager-adapter.key');
+
         $response = Http::accept('application/json')
             ->withHeaders([
                 'Authorization' => 'Bearer '.$key,
                 'X-LOCALE' => $request->header('X-LOCALE', 'en'),
+                'X-PRODUCT-TREES' => $request->header('X-PRODUCT-TREES'),
             ])
             ->get(config('product-manager-adapter.endpoint').'/api/tree-nodes/'.$slug, $queryParams);
 

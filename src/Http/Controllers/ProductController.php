@@ -13,7 +13,7 @@ class ProductController extends Controller
     use ApiControllerTrait;
 
     protected $allowedQueryParamKeys = [
-        'include', 'filter', 'number',
+        'include', 'filter', 'number', 'nodeSlug'
     ];
 
     public function index(Request $request): JsonResponse
@@ -24,6 +24,7 @@ class ProductController extends Controller
             ->withHeaders([
                 'Authorization' => 'Bearer '.$key,
                 'X-LOCALE' => $request->header('X-LOCALE', 'en'),
+                'X-PRODUCT-TREES' => $request->header('X-PRODUCT-TREES'),
             ])
             ->get(config('product-manager-adapter.endpoint').'/api/products', $queryParams);
 
@@ -38,6 +39,7 @@ class ProductController extends Controller
             ->withHeaders([
                 'Authorization' => 'Bearer '.$key,
                 'X-LOCALE' => $request->header('X-LOCALE', 'en'),
+                'X-PRODUCT-TREES' => $request->header('X-PRODUCT-TREES'),
             ])
             ->get(config('product-manager-adapter.endpoint').'/api/products/'.$sku.'/sku', $queryParams);
 
