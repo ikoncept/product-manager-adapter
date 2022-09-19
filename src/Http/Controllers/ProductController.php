@@ -13,7 +13,7 @@ class ProductController extends Controller
     use ApiControllerTrait;
 
     protected $allowedQueryParamKeys = [
-        'include', 'filter', 'number', 'nodeSlug'
+        'include', 'filter', 'number', 'nodeSlug',
     ];
 
     public function index(Request $request): JsonResponse
