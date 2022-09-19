@@ -16,20 +16,6 @@ class TreeNodeController extends Controller
         'include', 'filter',
     ];
 
-    public function index(Request $request): JsonResponse
-    {
-        $queryParams = $request->only($this->allowedQueryParamKeys);
-        $key = config('product-manager-adapter.key');
-        $response = Http::accept('application/json')
-            ->withHeaders([
-                'Authorization' => 'Bearer '.$key,
-                'X-LOCALE' => $request->header('X-LOCALE', 'en'),
-            ])
-            ->get(config('product-manager-adapter.endpoint').'/api/admin/tree-nodes/', $queryParams);
-
-        return $this->respondWithArray($response->json());
-    }
-
     public function show(Request $request, int $id): JsonResponse
     {
         $queryParams = $request->only($this->allowedQueryParamKeys);
