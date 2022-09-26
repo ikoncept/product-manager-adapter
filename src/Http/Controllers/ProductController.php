@@ -16,6 +16,21 @@ class ProductController extends Controller
         'include', 'filter', 'number', 'nodeSlug',
     ];
 
+    public function index(Request $request): JsonResponse
+    {
+        $key = config('product-manager-adapter.key');
+        $queryParams = $request->only($this->allowedQueryParamKeys);
+        $response = Http::accept('application/json')
+            ->withHeaders([
+                'Authorization' => 'Bearer '.$key,
+                'X-LOCALE' => $request->header('X-LOCALE', 'en'),
+                'X-PRODUCT-TREES' => $request->header('X-PRODUCT-TREES'),
+            ])
+            ->get(config('product-manager-adapter.endpoint').'/api/products/', $queryParams);
+
+        return $this->respondWithArray($response->json());
+    }
+
     public function show(Request $request, string $sku): JsonResponse
     {
         $key = config('product-manager-adapter.key');
