@@ -2,6 +2,4 @@
 
 namespace Ikoncept\ProductManagerAdapter;
 
-class ProductManagerAdapter
-{
-}
+class ProductManagerAdapter {}
